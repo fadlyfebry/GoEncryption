@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GO Encryption</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+    </header>
+
+    <!-- Login Section -->
+    <section id="login-section">
+      <form id="login-form" onsubmit="validateLogin(event)">
+        <div class="wrapper">
+          <h1>Login</h1>
+          <div class="input-box">
+            <input type="text" id="login-username" placeholder="Username" required>
+            <i class='bx bxs-user'></i>
+          </div>
+          <div class="input-box">
+            <input type="password" id="login-password" placeholder="Password" required>
+            <i class='bx bxs-lock-alt'></i>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <div class="register-link">
+            <p>Don't have an account? <a href="#" onclick="showRegisterPage()">Register</a></p>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Register Section -->
+    <section id="register-section" style="display:none;">
+      <form id="register-form" onsubmit="registerUser(event)">
+        <div class="wrapper">
+          <h1>Register</h1>
+          <div class="input-box">
+            <input type="text" id="register-username" placeholder="Username" required>
+            <i class='bx bxs-user'></i>
+          </div>
+          <div class="input-box">
+            <input type="password" id="register-password" placeholder="Password" required>
+            <i class='bx bxs-lock-alt'></i>
+          </div>
+          <button type="submit" class="btn">Register</button>
+          <div class="register-link">
+            <p>Already have an account? <a href="#" onclick="showLoginPage()">Login</a></p>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Encryption Section -->
+    <section id="encryption-section" style="display:none;">
+      <div class="navbar">
+        <button id="homeBtn">Home</button>
+        <button id="aboutBtn">About Me</button>
+        <button id="servicesBtn">Services</button>
+        <button onclick="logout()">Logout</button>
+        
+      </div>
+      <div class="content">
+        <div id="home" class="section active">
+          <h1>GO Encryption</h1>
+            <br><br>
+            <div class="text">
+              <p>GO Encryption adalah sebuah website yang dirancang khusus untuk melindungi keamanan file-file sensitif dan bersifat rahasia. Kami menyadari betapa pentingnya menjaga kerahasiaan data, terutama di era saat ini di mana ancaman terhadap keamanan data semakin meningkat. Dengan berbagai serangan siber yang kian canggih dan meluas, perlindungan data menjadi kebutuhan yang tidak bisa diabaikan. 
+                Oleh karena itu, kami berkomitmen untuk menyediakan solusi yang andal dan efektif dalam menjaga keamanan informasi penting.</p> <br><br>
+              <p>Website ini dibuat dengan menyediakan alat enkripsi dan dekripsi yang kuat serta mudah digunakan untuk memastikan bahwa data Anda tetap aman dari akses yang tidak sah. Dengan antarmuka yang user-friendly, pengguna dari berbagai latar belakang dapat dengan mudah mengamankan dokumen-dokumen penting mereka. Selain itu, fitur-fitur canggih yang kami tawarkan dirancang untuk memberikan perlindungan maksimal tanpa mengorbankan kemudahan penggunaan. 
+                GO Encryption berupaya menjadi solusi terbaik dalam menjaga kerahasiaan dan integritas data Anda di tengah meningkatnya ancaman digital.</p><br><br><br><br><br><br>
+              <h1 class="sub-title">Enkripsi Dan Deskripsi</h1>
+              <br><br>
+              <p>Enkripsi dan deskripsi adalah sebuah website yang dirancang khusus untuk melindungi keamanan file-file sensitif dan bersifat rahasia. 
+                kami menyadari betapa pentingnya menjaga kerahasian data, terutama pada era saat ini ancaman kemanana data semakin meningkat. 
+                oleh karena itu aplikasi ini di buat dengan menyediakan alat enkripsi dan deskripsi yang kuat dan mudah di gunakan untuk dapat 
+                memastikan bahwa data anda tetap aman dari akses yang tidak sah.</p>   
+            </div>
+            
+        </div>
+        <div id="about" class="section">
+          <h1>About Me</h1>
+          <div class="card card-1">
+            <img src="profile1.jpg" alt="red" class="card_img">
+            <div class="card_details">
+              <h1>Profile</h1>
+              <h1><span>Fadly Febri Yardan (20SA3019)</span></h1>
+              <p>Saya merupakan mahasiswa dari Universitas Amikom Purwokerto dengan jurusan teknoligi informasi dan mengambil bidang keamanan siber. saya memiliki visi untuk menciptakan dunia digital yang lebih aman dan terlindungi, 
+                melalui GO Encryption berupaya untuk memberdayakan pengguna dalam menjaga keamanan informasi mereka dari ancaman yang terus berkembang.</p><br><br>
+              <a href="https://www.instagram.com/fadly_febry/" target="_blank">instagram</a>
+            </div>
+          </div>
+        </div>
+        <div id="services" class="section">
+          <h1>Services</h1>
+          <div class="encrypt">
+            <div class="containerr">
+              <div class="in-box">
+                <div class="input-boxx">
+                  <input type="hidden" id="original-filename">
+                </div>
+                <div class="container">
+                  <div class="services-list">
+                    <div>
+                      <i class="fa-solid fa-code"></i>
+                      <h2>File Enkripsi</h2>
+                      <p>Enkripsi adalah proses mengubah teks asli menjadi teks sandi agar tidak mudah dibaca oleh pihak yang tidak berwenang. Proses enkripsi pada algoritma Advanced Encryption Standard (AES) melibatkan beberapa tahap, seperti SubBytes, ShiftRows, MixColumns, dan AddRoundKey</p>
+                      <br><br>
+                      <div class="input-boxx">
+                        <textarea id="file-content" placeholder="File content will appear here..." rows="10"></textarea>
+                      </div>
+                      <button onclick="encryptFile()">Encrypt</button>
+                    </div>
+                    <div>
+                      <i class="fa-sharp fa-solid fa-video"></i>
+                      <h2>File Deskripsi</h2>
+                      <p>Deskripsi adalah proses yang mengembalikan teks sandi menjadi teks asli. Proses deskripsi pada AES terdiri dari tahap-tahap yang merupakan kebalikan dari proses enkripsi, yaitu InvSubBytes, InvShiftRows, InvMixColumns, dan AddRoundKey</p>
+                      <br><br>
+                      <div class="output-box">
+                        <textarea id="output" placeholder="Encrypted/Decrypted content will appear here..." rows="10"></textarea>
+                      </div>
+                      <button onclick="decryptFile()">Decrypt</button>
+                    </div>
+                  </div>
+                  <br><br><br>
+                  <div class="input-password">
+                    <div class="input-file">
+                      <input type="file" id="file-input" accept=".txt" onchange="handleFileSelect(event)">
+                    </div>
+                    <div class="input-pass">
+                      <input type="password" id="password" placeholder="Enter Encryption Password" required>
+                    </div>
+                  </div>
+                  <div class="input-box">
+                    <input type="hidden" id="loaded-filename">
+                  </div>
+                  <br><br><br><br><br><br><br><br>
+                  <div class="bagian3">
+                    <div class="enkripsi-file">
+                      <h2>Encrypted Files</h2>
+                      <br>
+                     
+                      <br><br><br>
+                      <ul id="encrypted-files"></ul>
+                    </div>
+                    <br><br><br><br><br><br><br><br>
+                    <h2>Send Encrypted File to Another User</h2>
+                    <br><br>
+                    <div class="file-list">
+                      <div id="file-list"></div>
+                    </div>
+                    <br>
+                    <div class="search">
+                      <input type="text" id="user-search" placeholder="Enter Username to Send File">
+                      <br>
+                      <button onclick="sendSelectedFilesToUser()">Send File(s)</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,403 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: url('bg2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  margin: 0;
+  padding: 100px;
+ 
+}
+
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background: #444;
+  padding: 10px;
+}
+
+.navbar button {
+  background: #555;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.navbar button:hover {
+  background: #666;
+}
+
+.wrapper {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 420px;
+ 
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(9px);
+  color: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+}
+.wrapper h1{
+  font-size: 36px;
+  text-align: center;
+}
+.wrapper .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  
+  margin: 30px 0;
+}
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder{
+  color: #fff;
+}
+.input-box i{
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  transform: translate(-50%);
+  font-size: 20px;
+
+}
+.wrapper .remember-forgot{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+.remember-forgot label input{
+  accent-color: #fff;
+  margin-right: 3px;
+
+}
+.remember-forgot a{
+  color: #fff;
+  text-decoration: none;
+
+}
+.remember-forgot a:hover{
+  text-decoration: underline;
+}
+.wrapper .btn{
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+.wrapper .register-link{
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+
+}
+
+.register-link p a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.register-link p{
+  color: #fff;
+}
+.register-link p a:hover{
+  text-decoration: underline;
+}
+
+
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 28px;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-box input,
+.input-box textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-box i {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #555;
+}
+
+
+.content {
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+textarea {
+  resize: horizontal;
+}
+.input-password,
+.input-file,
+.input-pass {
+  margin: 20px 0;
+}
+
+.output-box textarea {
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+}
+
+.file-list,
+.search {
+  margin-top: 20px;
+}
+
+.search input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: #555;
+}
+
+
+
+.services-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.services-list h2 {
+  color: #fff;
+}
+.services-list div{
+  background: #262626;
+  box-shadow: 5px 5px 10px black;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 20px;
+  transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.services-list div h2{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.services-list div button{
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.services-list div:hover{
+  background: #ababab;
+  transform: translateY(-10px);
+}
+
+.containerr p1 {
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+}
+.containerr p {
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+}
+.enkripsi-file ul{
+  color: black;
+}
+.enkripsi-file p {
+  color: black;
+  position: absolute;
+  font-size: 20px;
+}
+.enkripsi-file h2 {
+  color: black;
+  font-size: 35px;
+}
+
+h2 {
+  color: black;
+}
+
+.file-list {
+  color: black;
+}
+
+.bagian3 {
+  background-color: #eff4ed;
+  padding: 30px 50px;
+  background-position: center;
+  background-size: 100%;
+  background-position: 100%;
+}
+
+.bagian3 h2 {
+  font-size: 35px;
+}
+
+
+
+.card {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+  display: grid;
+  column-gap: 48px;
+  width: 30%;
+  margin: 60px auto;
+  background-color: #fff
+}
+
+.card_img{
+  width: 100%;
+  display: block;
+}
+
+.card_details {
+  padding: 30px 0;
+}
+.card_details h1 {
+  color: #212121;
+  font-size: 30px;
+}
+.card_details h1 span {
+  color: #212121;
+  font-size: 15px;
+}
+.card_details p {
+  color: #212121;
+  text-align: center;
+  padding: 20px;
+}
+.card_details a {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.input-file {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: relative;
+  font-size: 16px;
+  background: #fff;
+  border-radius: 40px;
+  box-shadow: 5px 5px 10px black;
+  width: 300px;
+  outline: none;
+
+}
+.input-pass {
+  top: 50%;
+  left: 43%;
+  position: relative;
+  border-radius: 40px;
+}
+
+::-webkit-file-upload-button{
+  color: #fff;
+  background: #333;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+}
+
+.text p {
+  text-indent: 45px;
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
