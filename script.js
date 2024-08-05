@@ -224,13 +224,13 @@ function displayEncryptedFiles() {
     listItem.textContent = file.name;
 
     const downloadButton = document.createElement('button');
-    downloadButton.textContent = 'Download';
+    downloadButton.textContent = 'Unduh';
     downloadButton.onclick = () => {
       saveFile(file.content, file.name, 'text/plain');
     };
 
     const loadButton = document.createElement('button');
-    loadButton.textContent = 'Load';
+    loadButton.textContent = 'Pulihkan';
     loadButton.onclick = () => {
       document.getElementById('output').textContent = file.content;
       document.getElementById('loaded-filename').value = file.name;
@@ -239,7 +239,7 @@ function displayEncryptedFiles() {
     };
 
     const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Delete';
+    deleteButton.textContent = 'Hapus';
     deleteButton.onclick = () => {
       deleteEncryptedFile(index);
     };
