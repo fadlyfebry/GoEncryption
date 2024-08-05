@@ -72,7 +72,7 @@ function validateLogin(event) {
     loadRegisteredUsers();
     displaySendFileOptions();
   } else {
-    alert("Invalid username or password!");
+    alert("Nama Pengguna atau Password Salah!");
   }
 }
 
@@ -121,7 +121,7 @@ function encryptFile() {
   const password = document.getElementById('password').value;
 
   if (!fileInput.files.length || !password) {
-    alert('Please select a file and enter a password.');
+    alert('pilih file atau masukan kata sandi.');
     return;
   }
 
