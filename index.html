@@ -60,14 +60,14 @@
     <section id="encryption-section" style="display:none;">
       <div class="navbar">
         <button id="homeBtn">Home</button>
-        <button id="aboutBtn">About Me</button>
-        <button id="servicesBtn">Services</button>
+        <button id="aboutBtn">Tentang</button>
+        <button id="servicesBtn">Projek</button>
         <button onclick="logout()">Logout</button>
         
       </div>
       <div class="content">
         <div id="home" class="section active">
-          <h1>GO Encryptionn</h1>
+          <h1>GO Encryption</h1>
             <br><br>
             <div class="text">
               <p>GO Encryption adalah sebuah website yang dirancang khusus untuk melindungi keamanan file-file sensitif dan bersifat rahasia. Kami menyadari betapa pentingnya menjaga kerahasiaan data, terutama di era saat ini di mana ancaman terhadap keamanan data semakin meningkat. Dengan berbagai serangan siber yang kian canggih dan meluas, perlindungan data menjadi kebutuhan yang tidak bisa diabaikan. 
@@ -112,9 +112,9 @@
                       <p>Enkripsi adalah proses mengubah teks asli menjadi teks sandi agar tidak mudah dibaca oleh pihak yang tidak berwenang. Proses enkripsi pada algoritma Advanced Encryption Standard (AES) melibatkan beberapa tahap, seperti SubBytes, ShiftRows, MixColumns, dan AddRoundKey</p>
                       <br><br>
                       <div class="input-boxx">
-                        <textarea id="file-content" placeholder="File content will appear here..." rows="10"></textarea>
+                        <textarea id="file-content" placeholder="isi file..." rows="10"></textarea>
                       </div>
-                      <button onclick="encryptFile()">Encrypt</button>
+                      <button onclick="encryptFile()">Enkripsi File</button>
                     </div>
                     <div>
                       <i class="fa-sharp fa-solid fa-video"></i>
@@ -122,18 +122,18 @@
                       <p>Deskripsi adalah proses yang mengembalikan teks sandi menjadi teks asli. Proses deskripsi pada AES terdiri dari tahap-tahap yang merupakan kebalikan dari proses enkripsi, yaitu InvSubBytes, InvShiftRows, InvMixColumns, dan AddRoundKey</p>
                       <br><br>
                       <div class="output-box">
-                        <textarea id="output" placeholder="Encrypted/Decrypted content will appear here..." rows="10"></textarea>
+                        <textarea id="output" placeholder="terenkripsi..." rows="10"></textarea>
                       </div>
-                      <button onclick="decryptFile()">Decrypt</button>
+                      <button onclick="decryptFile()">Deskripsi File</button>
                     </div>
                   </div>
                   <br><br><br>
                   <div class="input-password">
                     <div class="input-file">
-                      <input type="file" id="file-input" accept=".txt" onchange="handleFileSelect(event)">
+                      <input type="file" id="fileInput">
                     </div>
                     <div class="input-pass">
-                      <input type="password" id="password" placeholder="Enter Encryption Password" required>
+                      <input type="password" id="password" placeholder="Enter Password">
                     </div>
                   </div>
                   <div class="input-box">
@@ -142,14 +142,14 @@
                   <br><br><br><br><br><br><br><br>
                   <div class="bagian3">
                     <div class="enkripsi-file">
-                      <h2>Encrypted Files</h2>
+                      <h2>Enkripsi Disimpan</h2>
                       <br>
                      
                       <br><br><br>
                       <ul id="encrypted-files"></ul>
                     </div>
                     <br><br><br><br><br><br><br><br>
-                    <h2>Send Encrypted File to Another User</h2>
+                    <h2>Kirim ke pengguna lain</h2>
                     <br><br>
                     <div class="file-list">
                       <div id="file-list"></div>
@@ -158,7 +158,7 @@
                     <div class="search">
                       <input type="text" id="user-search" placeholder="Enter Username to Send File">
                       <br>
-                      <button onclick="sendSelectedFilesToUser()">Send File(s)</button>
+                      <button onclick="sendSelectedFilesToUser()">Kirim</button>
                     </div>
                   </div>
                 </div>
